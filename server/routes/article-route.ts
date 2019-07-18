@@ -52,7 +52,7 @@ router.post('/articles/update/:id', (req, res, next) => {
 });
 
 // delete article
-router.post('/articles/delete/:id', (req, res, next) => {
+router.get('/articles/delete/:id', (req, res, next) => {
   const { id } = req.params;
   Article.findByIdAndRemove(id, (err, removedArticle) => {
     if (err) {
