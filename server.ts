@@ -66,7 +66,7 @@ app.use('/api', articleRouter);
 
 // All regular routes use the Universal engine
 app.get('*', (req, res) => {
-  res.render('index', { req });
+  // res.render('index', { req });
 });
 
 // handle error

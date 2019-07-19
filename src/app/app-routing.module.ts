@@ -4,6 +4,7 @@ import { ArticlesComponent } from './pages/articles/articles.component';
 import { ShowArticleComponent } from './pages/show-article/show-article.component';
 import { AddArticleComponent } from './pages/add-article/add-article.component';
 import { EditArticleComponent } from './pages/edit-article/edit-article.component';
+import { ArticleResolver } from './utils/resolvers/article.resolver';
 
 const routes: Routes = [
   {
@@ -14,7 +15,8 @@ const routes: Routes = [
   {
     path: 'show-article/:id',
     component: ShowArticleComponent,
-    data: { title: 'Show Article' }
+    data: { title: 'Show Article' },
+    resolve: { article: ArticleResolver}
   },
   {
     path: 'add-article',

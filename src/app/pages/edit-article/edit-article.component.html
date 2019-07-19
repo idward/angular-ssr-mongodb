@@ -7,7 +7,7 @@
     <a mat-flat-button color="primary" (click)="articleDetails()"><mat-icon>info</mat-icon></a>
   </div>
   <mat-card class="example-card">
-    <form [formGroup]="articleForm" (ngSubmit)="onFormSubmit()">
+    <form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
       <mat-form-field class="example-full-width">
         <input matInput placeholder="Title" formControlName="title"
                [errorStateMatcher]="matcher">
