@@ -14,7 +14,7 @@ export class ArticlesComponent implements OnInit, OnDestroy {
   displayedColumns: string[] = ['title', 'author'];
   getArticlesSubs: Subscription;
 
-  constructor(public fetchApiService: FetchApiService) {}
+  constructor(private fetchApiService: FetchApiService) {}
 
   ngOnInit() {
     this.getArticlesSubs = this.fetchApiService.getArticles().subscribe(
